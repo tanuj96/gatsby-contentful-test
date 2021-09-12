@@ -44,11 +44,10 @@ export const query = graphql`
                         heading
                         subHeading
                         backgroundImage {
-                            gatsbyImageData(
-                                layout: FULL_WIDTH
-                                placeholder: BLURRED
-                            )
-                        }
+                            fluid {
+                              src
+                            }
+                          }
                     }
                     ... on ContentfulPriceGroup {
                         __typename
